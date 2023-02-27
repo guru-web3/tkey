@@ -4,7 +4,6 @@ import {
   decrypt,
   DeleteShareResult,
   ecCurve,
-  ecPoint,
   encrypt,
   EncryptedMessage,
   FactorEnc,
@@ -13,7 +12,6 @@ import {
   generatePrivateExcludingIndexes,
   getPubKeyECC,
   getPubKeyPoint,
-  hexPoint,
   IMessageMetadata,
   IMetadata,
   InitializeNewKeyResult,
@@ -30,16 +28,13 @@ import {
   ModuleMap,
   ONE_KEY_DELETE_NONCE,
   Point,
-  PointHex,
   Polynomial,
   PolynomialID,
   prettyPrintError,
-  randomSelection,
   ReconstructedKeyResult,
   ReconstructKeyMiddlewareMap,
   RefreshMiddlewareMap,
   RefreshSharesResult,
-  RSSClient,
   Share,
   SHARE_DELETED,
   ShareSerializationMiddleware,
@@ -52,6 +47,7 @@ import {
   toPrivKeyECC,
 } from "@tkey/common-types";
 import { generatePrivate } from "@toruslabs/eccrypto";
+import { ecPoint, hexPoint, PointHex, randomSelection, RSSClient } from "@toruslabs/rss-client";
 import BN from "bn.js";
 import stringify from "json-stable-stringify";
 
